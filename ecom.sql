@@ -27,7 +27,7 @@ order_amount VARCHAR(20),
 customers_id INT,
 FOREIGN KEY (customers_id) REFERENCES customers(customers_id),
 );
-
+-- right click on a table, click SQL editor to insert faster
 CREATE TABLE order_details(
 	order_details_id INT AUTO_INCREMENT PRIMARY KEY,
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
