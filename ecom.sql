@@ -20,11 +20,12 @@ CREATE TABLE products(
 );
 
 CREATE TABLE orders(
-	order_id INT AUTO_INCREMENT PRIMARY KEY,
-	order_date VARCHAR(20),
-    order_status VARCHAR(20),
-    order_amount VARCHAR(20)
-	FOREIGN KEY (customers_id) REFERENCES custormers(customers_id),
+order_id INT AUTO_INCREMENT PRIMARY KEY,
+order_date VARCHAR(20),
+order_status VARCHAR(20),
+order_amount VARCHAR(20),
+customers_id INT,
+FOREIGN KEY (customers_id) REFERENCES customers(customers_id),
 );
 
 CREATE TABLE order_details(
