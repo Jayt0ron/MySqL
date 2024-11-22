@@ -33,6 +33,57 @@ CREATE TABLE order_details(
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     FOREIGN KEY (product_id) REFERENCES products(product_id),
     quantity_order INT
-    
-    
 );
+
+-- Inserts into customers table
+INSERT INTO `ecommerce`.`customers`
+(`customers_id`,
+`first_name`,
+`last_name`,
+`email`,
+`phone_number`,
+`address`,
+`state`)
+VALUES
+('89',
+'Joe',
+'Kerr' ,
+'joekerr86@website.com',
+123-345-6789 ,
+'123 Place St',
+'PA ');
+-- Second table of customers
+INSERT INTO `ecommerce`.`customers`
+(`customers_id`,
+`first_name`,
+`last_name`,
+`email`,
+`phone_number`,
+`address`,
+`state`)
+VALUES
+('99',
+"Miguel",
+"O'Hara",
+'miguelohara2099@verse.org' ,
+'009-017-2010',
+'599 Place st',
+'NY'
+);
+
+INSERT INTO `ecommerce`.`customers`
+(`customers_id`,
+`first_name`,
+`last_name`,
+`email`,
+`phone_number`,
+`address`,
+`state`)
+VALUES
+('13',
+'Luke',
+'Fox',
+'lukefox2008@wayneent.org',
+'098-765-5432',
+'915 Park Row',
+'NJ');
